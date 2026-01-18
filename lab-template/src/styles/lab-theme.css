@@ -1,0 +1,185 @@
+:root {
+  --bg: #111827;
+  --card-bg: #1f2937;
+  --text-primary: #f9fafb;
+  --text-secondary: #9ca3af;
+  --accent: #10b981;
+  --accent-soft: #064e3b;
+  --border: #374151;
+  --badge-bg: #065f46;
+  --badge-text: #a7f3d0;
+
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+
+  --shadow-sm: 0 6px 18px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 14px 40px rgba(0, 0, 0, 0.45);
+}
+
+.lab-body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+
+/* ---------- Layout ---------- */
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+  padding: 3rem 2.5rem;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* ---------- Cards ---------- */
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+/* ---------- Banner ---------- */
+
+.banner {
+  grid-column: 1 / -1;
+  background: linear-gradient(
+    135deg,
+    #064e3b 0%,
+    #047857 45%,
+    #10b981 100%
+  );
+  color: #ecfdf5;
+}
+
+.banner .meta {
+  color: rgba(236, 253, 245, 0.8);
+}
+
+/* ---------- Typography ---------- */
+
+.heading-large {
+  margin: 0 0 0.75rem;
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.heading-medium {
+  margin: 0 0 1.25rem;
+  font-size: 1.55rem;
+  font-weight: 600;
+}
+
+.heading-small {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.meta {
+  margin: 0 0 1.25rem;
+  font-size: 0.95rem;
+}
+
+/* ---------- Summary ---------- */
+
+.summary-list {
+  margin: 0 0 1.75rem;
+  padding: 0;
+}
+
+.summary-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.summary-list dt {
+  font-weight: 500;
+}
+
+.summary-list dd {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* ---------- Footer / Notes ---------- */
+
+.summary-footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.note {
+  margin: 0;
+}
+
+/* ---------- Resources ---------- */
+
+.resources {
+  grid-column: 1 / -1;
+}
+
+.resource-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.resource-item {
+  background-color: var(--accent-soft);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 1px solid #065f46;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.resource-item:hover {
+  background-color: #065f46;
+  transform: translateY(-2px);
+}
+
+.resource-item p {
+  margin: 0.5rem 0 0;
+  color: #d1fae5;
+  font-size: 0.95rem;
+}
+
+/* ---------- Badge ---------- */
+
+.badge {
+  display: inline-block;
+  margin-left: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--badge-bg);
+  color: var(--badge-text);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
